@@ -7,3 +7,8 @@ to run the project: docker-compose up
 in case of error please try: docker-compose run web python manage.py makemigrations users
 then: docker-compose run web python manage.py migrate
 and docker-compose up again
+
+
+Once running go to:
+
+http://localhost:80

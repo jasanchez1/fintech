@@ -15,8 +15,8 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
-    ports:
-      - "8000:8000"
+    expose:
+      - 8000
     depends_on:
       - db
 
@@ -27,3 +27,9 @@ services:
       - .:/code
     depends_on:
       - db
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
